@@ -146,16 +146,16 @@
          &kp Q            &kp W            &kp E             &kp R             &kp T               &kp Y            &kp U              &kp I              &kp O             &kp P
          &mt_left LGUI A  &mt_left LALT S  &mt_left LCTRL D  &mt_left LSHFT F  &kp G               &kp H            &mt_right RSHFT J  &mt_right RCTRL K  &mt_right RALT L  &mt_right RGUI SEMICOLON
 &kp ESC  &kp Z            &kp X            &kp C             &kp V             &kp B               &kp N            &kp M              &kp COMMA          &kp DOT           &kp FSLH                  &kp SQT
-                                           &kp DEL           &kp TAB           &lt_left 1 SPACE    &lt_right 2 RET  &none              &kp BSPC
+                                           &kp MINUS         &kp TAB           &lt_left 1 SPACE    &lt_right 2 RET  &none              &kp BSPC
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        nav_layer {
+        num_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAVI";
+            label = "NUM";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -169,10 +169,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp KP_NLCK  &kp INS  &kp HOME  &kp PG_UP      &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_PLUS
-          &none        &none    &kp END   &kp PAGE_DOWN  &kp LPAR    &kp RPAR  &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_MINUS
-&kp CAPS  &none        &kp DEL  &none     &none          &kp LBKT    &kp RBKT  &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_MULTIPLY  &kp EQUAL
-                                &trans    &trans         &trans      &mo ADJ   &kp KP_N0  &kp KP_DOT
+          &kp KP_NLCK  &kp INS   &kp HOME            &kp PG_UP                 &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_PLUS
+          &kp LGUI     &kp LALT  &mt_left LCTRL END  &mt_left LSHFT PAGE_DOWN  &kp LPAR    &kp RPAR  &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_MINUS
+&kp CAPS  &none        &kp DEL   &none               &none                     &kp LBKT    &kp RBKT  &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_MULTIPLY  &kp EQUAL
+                                 &trans              &trans                    &trans      &mo ADJ   &kp KP_N0  &kp KP_DOT
             >;
         };
 
@@ -195,19 +195,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp EXCL     &kp AT       &kp HASH   &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS  &kp ASTERISK  &kp SQT     &kp DQT
-           &kp RA(A)    &none        &kp RA(S)  &none         &kp MINUS       &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT   &none
-&kp GRAVE  &kp RA(F18)  &kp RA(F19)  &none      &kp C_VOL_DN  &kp C_VOL_UP    &none      &none     &kp C_PREV    &kp C_NEXT  &kp BSLH  &kp C_PLAY_PAUSE
-                                     &none      &gif          &mo ADJ         &none      &none     &none
+           &kp EXCL      &kp AT       &kp HASH   &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS  &kp ASTERISK  &kp SQT     &kp DQT
+           &kp LEFT_ALT  &kp LGUI     &kp LCTRL  &kp LSHFT     &kp MINUS       &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT   &kp BACKSLASH
+&kp GRAVE  &kp RA(F18)   &kp RA(F19)  &none      &kp C_VOL_DN  &kp C_VOL_UP    &none      &none     &kp C_PREV    &kp C_NEXT  &kp BSLH       &kp C_PLAY_PAUSE
+                                      &none      &gif          &mo ADJ         &none      &none     &none
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        adjust_layer {
+        func_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "ADJ";
+            label = "FN";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
