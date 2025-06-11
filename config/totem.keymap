@@ -120,10 +120,10 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <100>;
-            require-prior-idle-ms = <60>;
+            require-prior-idle-ms = <80>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 36 37 35 34 33 32>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 36 37 35>;
         };
 
         mt_right: mt_right {
@@ -134,10 +134,10 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <100>;
-            require-prior-idle-ms = <60>;
+            require-prior-idle-ms = <80>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <36 37 35 34 33 32 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33>;
+            hold-trigger-key-positions = <34 33 32 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33>;
         };
 
         lt_left: lt_left {
@@ -167,6 +167,34 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34>;
         };
+
+        mt_left_slow: mt_left_slow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_LEFT_SLOW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 36 37 35>;
+        };
+
+        mt_right_slow: mt_right_slow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_RIGHT_SLOW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <1 2 3 4 14 0 12 13 24 23 22 21 10 20 11 32 33 34 25>;
+        };
     };
 
     keymap {
@@ -191,10 +219,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q            &kp W            &kp E             &kp R             &kp T               &kp Y            &kp U              &kp I              &kp O             &kp P
-         &mt_left LGUI A  &mt_left LALT S  &mt_left LCTRL D  &mt_left LSHFT F  &kp G               &kp H            &mt_right RSHFT J  &mt_right RCTRL K  &mt_right LALT L  &mt_right RGUI SEMICOLON
-&kp ESC  &kp Z            &kp X            &kp C             &kp V             &kp B               &kp N            &kp M              &kp COMMA          &kp DOT           &lt_right 4 SLASH         &kp SQT
-                                           &none             &kp TAB           &lt_left 1 SPACE    &lt_right 2 RET  &kp BACKSPACE      &none
+         &kp Q                 &kp W                 &kp E             &kp R             &kp T               &kp Y            &kp U              &kp I              &kp O                  &kp P
+         &mt_left_slow LGUI A  &mt_left_slow LALT S  &mt_left LCTRL D  &mt_left LSHFT F  &kp G               &kp H            &mt_right RSHFT J  &mt_right RCTRL K  &mt_right_slow LALT L  &mt_right_slow RGUI SEMICOLON
+&kp ESC  &kp Z                 &kp X                 &kp C             &kp V             &kp B               &kp N            &kp M              &kp COMMA          &kp DOT                &lt_right 4 SLASH              &kp SQT
+                                                     &none             &kp TAB           &lt_left 1 SPACE    &lt_right 2 RET  &kp BACKSPACE      &none
             >;
         };
 
@@ -271,7 +299,7 @@
             bindings = <
              &bt BT_PRV  &bt BT_CLR    &bt BT_NXT  &none      &kp C_PAUSE          &kp C_PLAY       &kp F7  &kp F8  &kp F9  &kp F12
              &kp LGUI    &kp LALT      &kp LCTRL   &kp LSHFT  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP  &kp F4  &kp F5  &kp F6  &kp F11
-&bootloader  &sys_reset  &out OUT_TOG  &none       &none      &kp C_PREV           &kp C_NEXT       &kp F1  &kp F2  &kp F3  &kp F10  &none
+&bootloader  &sys_reset  &out OUT_TOG  &none       &none      &kp C_PREV           &kp C_NEXT       &kp F1  &kp F2  &kp F3  &kp F10  &kp PRINTSCREEN
                                        &none       &none      &none                &none            &trans  &none
             >;
         };
